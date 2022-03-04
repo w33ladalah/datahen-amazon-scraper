@@ -1,3 +1,4 @@
+nokogiri = Nokogiri.HTML(content)
 products = nokogiri.css('li.octopus-pc-item-v3')
 
 products.each do |product|
