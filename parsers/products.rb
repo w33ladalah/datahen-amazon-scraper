@@ -10,8 +10,8 @@ product['url'] = page['vars']['url']
 product['category'] = page['vars']['category']
 
 #extract the asin
-canonical_link = nokogiri.css('link').find{|link| link['rel'].strip == 'canonical' }
-product['asin'] = canonical_link['href'].split("/").last
+canonical_link = nokogiri.at_css('link[rel="canonical"]')['href']
+product['asin'] = canonical_link.split("/").last
 
 #extract title
 product['title'] = nokogiri.at_css('#productTitle').text.strip
