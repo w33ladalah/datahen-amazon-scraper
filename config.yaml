@@ -7,4 +7,4 @@ parsers:
     disabled: false
   - page_type: products
     file: ./parsers/products.rb
-    disabled: true
+    disabled: false
