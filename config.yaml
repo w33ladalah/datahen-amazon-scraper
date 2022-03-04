@@ -4,4 +4,4 @@ seeder:
 parsers:
   - page_type: listings
     file: ./parsers/listings.rb
-    disabled: true
+    disabled: false
